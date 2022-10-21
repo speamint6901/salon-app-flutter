@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "232961477914",
+    "project_id": "udemy-salon",
+    "storage_bucket": "udemy-salon.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:232961477914:android:0134ef371f1f1984dab0a3",
+        "android_client_info": {
+          "package_name": "com.example.udemy_salon"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "232961477914-3084uf00kh89pf6gbfqgk58sjqi0514l.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCVB0CRKa3pz05_PLiUp6OgsySigAhdAfY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "232961477914-3084uf00kh89pf6gbfqgk58sjqi0514l.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

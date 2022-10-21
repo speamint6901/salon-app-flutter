@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>232961477914-63o4f6nt5vvvvl8dfacdjddba69n1a17.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.232961477914-63o4f6nt5vvvvl8dfacdjddba69n1a17</string>
+	<key>API_KEY</key>
+	<string>AIzaSyCv15kywpcHGItkSfiQYvr74FimXaBf4-c</string>
+	<key>GCM_SENDER_ID</key>
+	<string>232961477914</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.example.udemySalon</string>
+	<key>PROJECT_ID</key>
+	<string>udemy-salon</string>
+	<key>STORAGE_BUCKET</key>
+	<string>udemy-salon.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:232961477914:ios:bb24d6ee8b60973bdab0a3</string>
+</dict>
+</plist>

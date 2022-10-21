@@ -1,0 +1,8 @@
+// freezコードジェネレート
+flutter pub run build_runner build --delete-conflicting-outputs
+
+// firestore_rulesデプロイ
+firebase deploy --only firestore:rules
+
+// cloud_functionsデプロイ
+firebase deploy --only functions
