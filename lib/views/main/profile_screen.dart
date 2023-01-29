@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:udemy_salon/atoms/rounded_button.dart';
-import 'package:udemy_salon/atoms/user_image.dart';
 import 'package:udemy_salon/models/main_model.dart';
 import 'package:udemy_salon/models/profile_model.dart';
+import 'package:udemy_salon/views/atoms/rounded_button.dart';
+import 'package:udemy_salon/views/atoms/user_image.dart';
 
 class ProfileScreen extends ConsumerWidget {
   const ProfileScreen({
@@ -30,6 +30,7 @@ class ProfileScreen extends ConsumerWidget {
           widthRate: 0.8,
           color: Colors.green,
           labelText: "アップロード",
+          textSize: 16,
         ),
         SizedBox(
           height: 32.0,

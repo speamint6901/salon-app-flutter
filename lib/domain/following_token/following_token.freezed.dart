@@ -23,6 +23,7 @@ mixin _$FollowingToken {
   String get tokenId => throw _privateConstructorUsedError;
   String get passiveUid => throw _privateConstructorUsedError;
   dynamic get createdAt => throw _privateConstructorUsedError;
+  String get tokenType => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -36,7 +37,8 @@ abstract class $FollowingTokenCopyWith<$Res> {
           FollowingToken value, $Res Function(FollowingToken) then) =
       _$FollowingTokenCopyWithImpl<$Res, FollowingToken>;
   @useResult
-  $Res call({String tokenId, String passiveUid, dynamic createdAt});
+  $Res call(
+      {String tokenId, String passiveUid, dynamic createdAt, String tokenType});
 }
 
 /// @nodoc
@@ -55,6 +57,7 @@ class _$FollowingTokenCopyWithImpl<$Res, $Val extends FollowingToken>
     Object? tokenId = null,
     Object? passiveUid = null,
     Object? createdAt = null,
+    Object? tokenType = null,
   }) {
     return _then(_value.copyWith(
       tokenId: null == tokenId
@@ -69,6 +72,10 @@ class _$FollowingTokenCopyWithImpl<$Res, $Val extends FollowingToken>
           ? _value.createdAt
           : createdAt // ignore: cast_nullable_to_non_nullable
               as dynamic,
+      tokenType: null == tokenType
+          ? _value.tokenType
+          : tokenType // ignore: cast_nullable_to_non_nullable
+              as String,
     ) as $Val);
   }
 }
@@ -81,7 +88,8 @@ abstract class _$$_FollowingTokenCopyWith<$Res>
       __$$_FollowingTokenCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({String tokenId, String passiveUid, dynamic createdAt});
+  $Res call(
+      {String tokenId, String passiveUid, dynamic createdAt, String tokenType});
 }
 
 /// @nodoc
@@ -98,6 +106,7 @@ class __$$_FollowingTokenCopyWithImpl<$Res>
     Object? tokenId = null,
     Object? passiveUid = null,
     Object? createdAt = null,
+    Object? tokenType = null,
   }) {
     return _then(_$_FollowingToken(
       tokenId: null == tokenId
@@ -112,6 +121,10 @@ class __$$_FollowingTokenCopyWithImpl<$Res>
           ? _value.createdAt
           : createdAt // ignore: cast_nullable_to_non_nullable
               as dynamic,
+      tokenType: null == tokenType
+          ? _value.tokenType
+          : tokenType // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -122,7 +135,8 @@ class _$_FollowingToken implements _FollowingToken {
   const _$_FollowingToken(
       {required this.tokenId,
       required this.passiveUid,
-      required this.createdAt});
+      required this.createdAt,
+      required this.tokenType});
 
   factory _$_FollowingToken.fromJson(Map<String, dynamic> json) =>
       _$$_FollowingTokenFromJson(json);
@@ -133,10 +147,12 @@ class _$_FollowingToken implements _FollowingToken {
   final String passiveUid;
   @override
   final dynamic createdAt;
+  @override
+  final String tokenType;
 
   @override
   String toString() {
-    return 'FollowingToken(tokenId: $tokenId, passiveUid: $passiveUid, createdAt: $createdAt)';
+    return 'FollowingToken(tokenId: $tokenId, passiveUid: $passiveUid, createdAt: $createdAt, tokenType: $tokenType)';
   }
 
   @override
@@ -147,13 +163,15 @@ class _$_FollowingToken implements _FollowingToken {
             (identical(other.tokenId, tokenId) || other.tokenId == tokenId) &&
             (identical(other.passiveUid, passiveUid) ||
                 other.passiveUid == passiveUid) &&
-            const DeepCollectionEquality().equals(other.createdAt, createdAt));
+            const DeepCollectionEquality().equals(other.createdAt, createdAt) &&
+            (identical(other.tokenType, tokenType) ||
+                other.tokenType == tokenType));
   }
 
   @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(runtimeType, tokenId, passiveUid,
-      const DeepCollectionEquality().hash(createdAt));
+      const DeepCollectionEquality().hash(createdAt), tokenType);
 
   @JsonKey(ignore: true)
   @override
@@ -173,7 +191,8 @@ abstract class _FollowingToken implements FollowingToken {
   const factory _FollowingToken(
       {required final String tokenId,
       required final String passiveUid,
-      required final dynamic createdAt}) = _$_FollowingToken;
+      required final dynamic createdAt,
+      required final String tokenType}) = _$_FollowingToken;
 
   factory _FollowingToken.fromJson(Map<String, dynamic> json) =
       _$_FollowingToken.fromJson;
@@ -184,6 +203,8 @@ abstract class _FollowingToken implements FollowingToken {
   String get passiveUid;
   @override
   dynamic get createdAt;
+  @override
+  String get tokenType;
   @override
   @JsonKey(ignore: true)
   _$$_FollowingTokenCopyWith<_$_FollowingToken> get copyWith =>

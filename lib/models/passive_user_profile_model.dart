@@ -24,6 +24,7 @@ class PassiveUserProfileModel extends ChangeNotifier {
       tokenId: tokenId,
       passiveUid: passiveFirestoreUser.uid,
       createdAt: timeStampNow,
+      tokenType: "following",
     );
     final FirestoreUser activeUser = mainModel.firestoreUser;
     print(activeUser);

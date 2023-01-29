@@ -8,7 +8,6 @@ abstract class FirestoreUser with _$FirestoreUser {
   const factory FirestoreUser({
     required String userName,
     required String uid,
-    required String email,
     required String password,
     required bool isAdmin,
     required int followerCount,

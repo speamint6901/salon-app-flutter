@@ -26,6 +26,7 @@ mixin _$LikePostToken {
   dynamic get postRef => throw _privateConstructorUsedError;
   String get postId => throw _privateConstructorUsedError;
   dynamic get createdAt => throw _privateConstructorUsedError;
+  String get tokenType => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -45,7 +46,8 @@ abstract class $LikePostTokenCopyWith<$Res> {
       String passiveUid,
       dynamic postRef,
       String postId,
-      dynamic createdAt});
+      dynamic createdAt,
+      String tokenType});
 }
 
 /// @nodoc
@@ -67,6 +69,7 @@ class _$LikePostTokenCopyWithImpl<$Res, $Val extends LikePostToken>
     Object? postRef = null,
     Object? postId = null,
     Object? createdAt = null,
+    Object? tokenType = null,
   }) {
     return _then(_value.copyWith(
       tokenId: null == tokenId
@@ -93,6 +96,10 @@ class _$LikePostTokenCopyWithImpl<$Res, $Val extends LikePostToken>
           ? _value.createdAt
           : createdAt // ignore: cast_nullable_to_non_nullable
               as dynamic,
+      tokenType: null == tokenType
+          ? _value.tokenType
+          : tokenType // ignore: cast_nullable_to_non_nullable
+              as String,
     ) as $Val);
   }
 }
@@ -111,7 +118,8 @@ abstract class _$$_LikePostTokenCopyWith<$Res>
       String passiveUid,
       dynamic postRef,
       String postId,
-      dynamic createdAt});
+      dynamic createdAt,
+      String tokenType});
 }
 
 /// @nodoc
@@ -131,6 +139,7 @@ class __$$_LikePostTokenCopyWithImpl<$Res>
     Object? postRef = null,
     Object? postId = null,
     Object? createdAt = null,
+    Object? tokenType = null,
   }) {
     return _then(_$_LikePostToken(
       tokenId: null == tokenId
@@ -157,6 +166,10 @@ class __$$_LikePostTokenCopyWithImpl<$Res>
           ? _value.createdAt
           : createdAt // ignore: cast_nullable_to_non_nullable
               as dynamic,
+      tokenType: null == tokenType
+          ? _value.tokenType
+          : tokenType // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -170,7 +183,8 @@ class _$_LikePostToken implements _LikePostToken {
       required this.passiveUid,
       required this.postRef,
       required this.postId,
-      required this.createdAt});
+      required this.createdAt,
+      required this.tokenType});
 
   factory _$_LikePostToken.fromJson(Map<String, dynamic> json) =>
       _$$_LikePostTokenFromJson(json);
@@ -187,10 +201,12 @@ class _$_LikePostToken implements _LikePostToken {
   final String postId;
   @override
   final dynamic createdAt;
+  @override
+  final String tokenType;
 
   @override
   String toString() {
-    return 'LikePostToken(tokenId: $tokenId, activeUid: $activeUid, passiveUid: $passiveUid, postRef: $postRef, postId: $postId, createdAt: $createdAt)';
+    return 'LikePostToken(tokenId: $tokenId, activeUid: $activeUid, passiveUid: $passiveUid, postRef: $postRef, postId: $postId, createdAt: $createdAt, tokenType: $tokenType)';
   }
 
   @override
@@ -205,7 +221,9 @@ class _$_LikePostToken implements _LikePostToken {
                 other.passiveUid == passiveUid) &&
             const DeepCollectionEquality().equals(other.postRef, postRef) &&
             (identical(other.postId, postId) || other.postId == postId) &&
-            const DeepCollectionEquality().equals(other.createdAt, createdAt));
+            const DeepCollectionEquality().equals(other.createdAt, createdAt) &&
+            (identical(other.tokenType, tokenType) ||
+                other.tokenType == tokenType));
   }
 
   @JsonKey(ignore: true)
@@ -217,7 +235,8 @@ class _$_LikePostToken implements _LikePostToken {
       passiveUid,
       const DeepCollectionEquality().hash(postRef),
       postId,
-      const DeepCollectionEquality().hash(createdAt));
+      const DeepCollectionEquality().hash(createdAt),
+      tokenType);
 
   @JsonKey(ignore: true)
   @override
@@ -240,7 +259,8 @@ abstract class _LikePostToken implements LikePostToken {
       required final String passiveUid,
       required final dynamic postRef,
       required final String postId,
-      required final dynamic createdAt}) = _$_LikePostToken;
+      required final dynamic createdAt,
+      required final String tokenType}) = _$_LikePostToken;
 
   factory _LikePostToken.fromJson(Map<String, dynamic> json) =
       _$_LikePostToken.fromJson;
@@ -257,6 +277,8 @@ abstract class _LikePostToken implements LikePostToken {
   String get postId;
   @override
   dynamic get createdAt;
+  @override
+  String get tokenType;
   @override
   @JsonKey(ignore: true)
   _$$_LikePostTokenCopyWith<_$_LikePostToken> get copyWith =>

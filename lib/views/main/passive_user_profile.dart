@@ -2,11 +2,11 @@
 import 'package:flutter/material.dart';
 // packages
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:udemy_salon/atoms/rounded_button.dart';
-import 'package:udemy_salon/atoms/user_image.dart';
 import 'package:udemy_salon/domain/firestore_user/firestore_user.dart';
 import 'package:udemy_salon/models/main_model.dart';
 import 'package:udemy_salon/models/passive_user_profile_model.dart';
+import 'package:udemy_salon/views/atoms/rounded_button.dart';
+import 'package:udemy_salon/views/atoms/user_image.dart';
 
 class PassiveUserProfile extends ConsumerWidget {
   const PassiveUserProfile({
@@ -56,6 +56,7 @@ class PassiveUserProfile extends ConsumerWidget {
                   widthRate: 0.8,
                   color: Colors.green,
                   labelText: "フォローを外す",
+                  textSize: 16,
                 )
               : RoundedButton(
                   onPressed: () async => passiveUserProfileModel.follow(
@@ -63,6 +64,7 @@ class PassiveUserProfile extends ConsumerWidget {
                   widthRate: 0.8,
                   color: Colors.green,
                   labelText: "フォローする",
+                  textSize: 16,
                 )
         ],
       ),

@@ -14,6 +14,8 @@ abstract class Post with _$Post {
     required String text,
     required String imageURL,
     required List<String> hashTags,
+    required String userName,
+    required String userImageURL,
     required dynamic createdAt,
     required dynamic updatedAt,
   }) = _Post;

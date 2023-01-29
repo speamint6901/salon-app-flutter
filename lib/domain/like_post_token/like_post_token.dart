@@ -14,6 +14,7 @@ abstract class LikePostToken with _$LikePostToken {
     required dynamic postRef,
     required String postId,
     required dynamic createdAt,
+    required String tokenType,
   }) = _LikePostToken;
   factory LikePostToken.fromJson(Map<String, dynamic> json) =>
       _$LikePostTokenFromJson(json);

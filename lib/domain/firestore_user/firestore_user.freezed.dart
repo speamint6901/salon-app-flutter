@@ -22,7 +22,6 @@ FirestoreUser _$FirestoreUserFromJson(Map<String, dynamic> json) {
 mixin _$FirestoreUser {
   String get userName => throw _privateConstructorUsedError;
   String get uid => throw _privateConstructorUsedError;
-  String get email => throw _privateConstructorUsedError;
   String get password => throw _privateConstructorUsedError;
   bool get isAdmin => throw _privateConstructorUsedError;
   int get followerCount => throw _privateConstructorUsedError;
@@ -46,7 +45,6 @@ abstract class $FirestoreUserCopyWith<$Res> {
   $Res call(
       {String userName,
       String uid,
-      String email,
       String password,
       bool isAdmin,
       int followerCount,
@@ -71,7 +69,6 @@ class _$FirestoreUserCopyWithImpl<$Res, $Val extends FirestoreUser>
   $Res call({
     Object? userName = null,
     Object? uid = null,
-    Object? email = null,
     Object? password = null,
     Object? isAdmin = null,
     Object? followerCount = null,
@@ -88,10 +85,6 @@ class _$FirestoreUserCopyWithImpl<$Res, $Val extends FirestoreUser>
       uid: null == uid
           ? _value.uid
           : uid // ignore: cast_nullable_to_non_nullable
-              as String,
-      email: null == email
-          ? _value.email
-          : email // ignore: cast_nullable_to_non_nullable
               as String,
       password: null == password
           ? _value.password
@@ -136,7 +129,6 @@ abstract class _$$_FirestoreUserCopyWith<$Res>
   $Res call(
       {String userName,
       String uid,
-      String email,
       String password,
       bool isAdmin,
       int followerCount,
@@ -159,7 +151,6 @@ class __$$_FirestoreUserCopyWithImpl<$Res>
   $Res call({
     Object? userName = null,
     Object? uid = null,
-    Object? email = null,
     Object? password = null,
     Object? isAdmin = null,
     Object? followerCount = null,
@@ -176,10 +167,6 @@ class __$$_FirestoreUserCopyWithImpl<$Res>
       uid: null == uid
           ? _value.uid
           : uid // ignore: cast_nullable_to_non_nullable
-              as String,
-      email: null == email
-          ? _value.email
-          : email // ignore: cast_nullable_to_non_nullable
               as String,
       password: null == password
           ? _value.password
@@ -219,7 +206,6 @@ class _$_FirestoreUser implements _FirestoreUser {
   const _$_FirestoreUser(
       {required this.userName,
       required this.uid,
-      required this.email,
       required this.password,
       required this.isAdmin,
       required this.followerCount,
@@ -235,8 +221,6 @@ class _$_FirestoreUser implements _FirestoreUser {
   final String userName;
   @override
   final String uid;
-  @override
-  final String email;
   @override
   final String password;
   @override
@@ -254,7 +238,7 @@ class _$_FirestoreUser implements _FirestoreUser {
 
   @override
   String toString() {
-    return 'FirestoreUser(userName: $userName, uid: $uid, email: $email, password: $password, isAdmin: $isAdmin, followerCount: $followerCount, followingCount: $followingCount, createdAt: $createdAt, updatedAt: $updatedAt, userImageURL: $userImageURL)';
+    return 'FirestoreUser(userName: $userName, uid: $uid, password: $password, isAdmin: $isAdmin, followerCount: $followerCount, followingCount: $followingCount, createdAt: $createdAt, updatedAt: $updatedAt, userImageURL: $userImageURL)';
   }
 
   @override
@@ -265,7 +249,6 @@ class _$_FirestoreUser implements _FirestoreUser {
             (identical(other.userName, userName) ||
                 other.userName == userName) &&
             (identical(other.uid, uid) || other.uid == uid) &&
-            (identical(other.email, email) || other.email == email) &&
             (identical(other.password, password) ||
                 other.password == password) &&
             (identical(other.isAdmin, isAdmin) || other.isAdmin == isAdmin) &&
@@ -285,7 +268,6 @@ class _$_FirestoreUser implements _FirestoreUser {
       runtimeType,
       userName,
       uid,
-      email,
       password,
       isAdmin,
       followerCount,
@@ -312,7 +294,6 @@ abstract class _FirestoreUser implements FirestoreUser {
   const factory _FirestoreUser(
       {required final String userName,
       required final String uid,
-      required final String email,
       required final String password,
       required final bool isAdmin,
       required final int followerCount,
@@ -328,8 +309,6 @@ abstract class _FirestoreUser implements FirestoreUser {
   String get userName;
   @override
   String get uid;
-  @override
-  String get email;
   @override
   String get password;
   @override

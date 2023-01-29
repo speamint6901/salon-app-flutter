@@ -26,6 +26,8 @@ mixin _$Post {
   String get text => throw _privateConstructorUsedError;
   String get imageURL => throw _privateConstructorUsedError;
   List<String> get hashTags => throw _privateConstructorUsedError;
+  String get userName => throw _privateConstructorUsedError;
+  String get userImageURL => throw _privateConstructorUsedError;
   dynamic get createdAt => throw _privateConstructorUsedError;
   dynamic get updatedAt => throw _privateConstructorUsedError;
 
@@ -46,6 +48,8 @@ abstract class $PostCopyWith<$Res> {
       String text,
       String imageURL,
       List<String> hashTags,
+      String userName,
+      String userImageURL,
       dynamic createdAt,
       dynamic updatedAt});
 }
@@ -69,6 +73,8 @@ class _$PostCopyWithImpl<$Res, $Val extends Post>
     Object? text = null,
     Object? imageURL = null,
     Object? hashTags = null,
+    Object? userName = null,
+    Object? userImageURL = null,
     Object? createdAt = null,
     Object? updatedAt = null,
   }) {
@@ -97,6 +103,14 @@ class _$PostCopyWithImpl<$Res, $Val extends Post>
           ? _value.hashTags
           : hashTags // ignore: cast_nullable_to_non_nullable
               as List<String>,
+      userName: null == userName
+          ? _value.userName
+          : userName // ignore: cast_nullable_to_non_nullable
+              as String,
+      userImageURL: null == userImageURL
+          ? _value.userImageURL
+          : userImageURL // ignore: cast_nullable_to_non_nullable
+              as String,
       createdAt: null == createdAt
           ? _value.createdAt
           : createdAt // ignore: cast_nullable_to_non_nullable
@@ -122,6 +136,8 @@ abstract class _$$_PostCopyWith<$Res> implements $PostCopyWith<$Res> {
       String text,
       String imageURL,
       List<String> hashTags,
+      String userName,
+      String userImageURL,
       dynamic createdAt,
       dynamic updatedAt});
 }
@@ -141,6 +157,8 @@ class __$$_PostCopyWithImpl<$Res> extends _$PostCopyWithImpl<$Res, _$_Post>
     Object? text = null,
     Object? imageURL = null,
     Object? hashTags = null,
+    Object? userName = null,
+    Object? userImageURL = null,
     Object? createdAt = null,
     Object? updatedAt = null,
   }) {
@@ -169,6 +187,14 @@ class __$$_PostCopyWithImpl<$Res> extends _$PostCopyWithImpl<$Res, _$_Post>
           ? _value._hashTags
           : hashTags // ignore: cast_nullable_to_non_nullable
               as List<String>,
+      userName: null == userName
+          ? _value.userName
+          : userName // ignore: cast_nullable_to_non_nullable
+              as String,
+      userImageURL: null == userImageURL
+          ? _value.userImageURL
+          : userImageURL // ignore: cast_nullable_to_non_nullable
+              as String,
       createdAt: null == createdAt
           ? _value.createdAt
           : createdAt // ignore: cast_nullable_to_non_nullable
@@ -191,6 +217,8 @@ class _$_Post implements _Post {
       required this.text,
       required this.imageURL,
       required final List<String> hashTags,
+      required this.userName,
+      required this.userImageURL,
       required this.createdAt,
       required this.updatedAt})
       : _hashTags = hashTags;
@@ -215,13 +243,17 @@ class _$_Post implements _Post {
   }
 
   @override
+  final String userName;
+  @override
+  final String userImageURL;
+  @override
   final dynamic createdAt;
   @override
   final dynamic updatedAt;
 
   @override
   String toString() {
-    return 'Post(postId: $postId, likeCount: $likeCount, uid: $uid, text: $text, imageURL: $imageURL, hashTags: $hashTags, createdAt: $createdAt, updatedAt: $updatedAt)';
+    return 'Post(postId: $postId, likeCount: $likeCount, uid: $uid, text: $text, imageURL: $imageURL, hashTags: $hashTags, userName: $userName, userImageURL: $userImageURL, createdAt: $createdAt, updatedAt: $updatedAt)';
   }
 
   @override
@@ -237,6 +269,10 @@ class _$_Post implements _Post {
             (identical(other.imageURL, imageURL) ||
                 other.imageURL == imageURL) &&
             const DeepCollectionEquality().equals(other._hashTags, _hashTags) &&
+            (identical(other.userName, userName) ||
+                other.userName == userName) &&
+            (identical(other.userImageURL, userImageURL) ||
+                other.userImageURL == userImageURL) &&
             const DeepCollectionEquality().equals(other.createdAt, createdAt) &&
             const DeepCollectionEquality().equals(other.updatedAt, updatedAt));
   }
@@ -251,6 +287,8 @@ class _$_Post implements _Post {
       text,
       imageURL,
       const DeepCollectionEquality().hash(_hashTags),
+      userName,
+      userImageURL,
       const DeepCollectionEquality().hash(createdAt),
       const DeepCollectionEquality().hash(updatedAt));
 
@@ -276,6 +314,8 @@ abstract class _Post implements Post {
       required final String text,
       required final String imageURL,
       required final List<String> hashTags,
+      required final String userName,
+      required final String userImageURL,
       required final dynamic createdAt,
       required final dynamic updatedAt}) = _$_Post;
 
@@ -293,6 +333,10 @@ abstract class _Post implements Post {
   String get imageURL;
   @override
   List<String> get hashTags;
+  @override
+  String get userName;
+  @override
+  String get userImageURL;
   @override
   dynamic get createdAt;
   @override

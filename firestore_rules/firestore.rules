@@ -3,17 +3,38 @@ service cloud.firestore {
   match /databases/{database}/documents {
     match /users/{uid} {
       allow read: if isAuthenticated();
+      allow update: if isAdmin();
       allow create, delete: if isTheSameUserOrAdmin(uid);
       match /tokens/{tokenId} {
         allow read, create, delete: if isTheSameUserOrAdmin(uid)
       }
+      match /tokens/{postId} {
+         allow read, create, delete: if isTheSameUserOrAdmin(uid)
+       }
       match /followers/{followerUid} {
         allow create, delete: if isTheSameUserOrAdmin(followerUid);
       }
       match /posts/{postId} {
         allow read: if isAuthenticated();
         allow create, delete: if isTheSameUserOrAdmin(uid);
+        allow update: if isAdmin();
+        match /postLikes/{activeUid} {
+            allow create, update, delete: if isTheSameUserOrAdmin(activeUid);
+        }
+        match /postComments/{postCommentId} {
+            allow read: if isAuthenticated();
+            allow create, delete: if isTheSameUserOrAdmin(uid);
+        }
       }
+     }
+     match /{path=**}/salons/{any} {
+        allow read : if isAuthenticated();
+     }
+     match /rooms/{any} {
+       allow read, create, update: if isAuthenticated();
+     }
+     match /memo/{any} {
+        allow read, create, update: if isAuthenticated();
      }
   }
   function isAuthenticated() {
